@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  border: 5px solid black;
+}
+
+.headerSection{
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 16px;
+  background-image: linear-gradient(to right, rgb(0, 92, 134) , rgb(104, 2, 129));
+}
+.logo{
+  font-size: 2rem;
+}
+.center ul li{
+  list-style: none;
+  display: inline-flex;
+  margin: 0px 10px;
+  cursor: pointer;
+
+}
+.center ul li:hover{
+  color: whitesmoke;
+}
+
+.left{
+  flex: 4;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+.center{
+  flex: 4;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+.serch{
+  flex: 2;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  cursor: pointer;
+}
+.serch input{
+  color: wh;
+  background: transparent;
+}
+.right{
+  flex: 4;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+
+}
+
+.signin{
+  color: black;
+  cursor: pointer;
+}
+.signin:hover{
+  color: whitesmoke;
+}
+
+
+/* Banner component */
+
+.bannerSection img{
+  width: 100%;
+
+}
+.banerBox{
+  margin: 10px 0px;
+  border: 1px solid black;
+}
+
+.menImages{
+  display: flex;
+  gap: 10px;
+}
+.menImages img{
+  width: 220px;
+  height: 200px;
+}
+.Banner{
+  width: 100%;
+}
+
+.Life{
+  font-weight: bold;
+  color: white;
+}
+.Style{
+  font-weight: 400;
+  color: orange;
+}
+
+/* Responsive Layout */
+@media only screen and (max-width: 768px) {
+  .headerSection {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .center {
+      order: 3; /* Move center section to bottom on small screens */
+  }
+
+  .search {
+      order: 2; /* Move search section to middle on small screens */
+      margin: 10px 0; /* Adjust margin for better spacing */
+  }
+
+  .right {
+      order: 1; /* Move right section to top on small screens */
+      justify-content: center; /* Center items horizontally */
+  }
+
+  .menImages img {
+      width: 100%; /* Make images fill container width */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Banner Component */
+.bannerSection img {
+  width: 100%;
+}
+
+.bannerBox {
+  margin: 10px 0;
+  border: 1px solid black;
+}
+
+.menImages {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.menImages img {
+  width: calc(33.33% - 20px); /* Adjust image width for better responsiveness */
+  max-width: 220px; /* Limit maximum width */
+  height: auto;
+}
+
+.Banner {
+  width: 100%;
+}
+
+.Life {
+  font-weight: bold;
+  color: white;
+}
+
+.Style {
+  font-weight: 400;
+  color: orange;
+}
